@@ -43,20 +43,14 @@ This project simulates a cloud-ready data acquisition pipeline that continuously
 
 ## 🛠️ Tech Stack & Dependencies
 
-Language: Python 3.x
-
-Database: MySQL 8.0+
-
-Data Processing: Pandas
-
-Web Scraping: BeautifulSoup4, Requests
-
-Database ORM: SQLAlchemy, PyMySQL
-
-External APIs: OpenWeatherMap API, AeroDataBox API (via RapidAPI)
+* **Language:** Python 3.x
+* **Database:** MySQL 8.0+
+* **Data Processing:** Pandas
+* **Web Scraping:** BeautifulSoup4, Requests
+* **Database ORM:** SQLAlchemy, PyMySQL
+* **External APIs:** OpenWeatherMap API, AeroDataBox API (via RapidAPI)
 
 ## 📁 Repository Structure
-
 ```text
 ├── src/
 │   ├── collectors/
