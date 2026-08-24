@@ -1,0 +1,9 @@
+channels:
+  - https://repo.anaconda.com/pkgs/main
+  - conda-forge
+dependencies:
+  - pandas=3.0.5
+  - pymysql=1.2.0
+  - python=3.14.7
+  - sqlalchemy=2.0.51
+  - python-dotenv=1.2.2
