@@ -29,7 +29,7 @@ This project simulates a cloud-ready data acquisition pipeline that continuously
 
 ## 🏗️ Technical Architecture & Workflow
 
-```text
+``` text
 ┌────────────────┐      ┌─────────────────────────┐      ┌──────────────────────┐
 │  Data Sources  │ ───► │  Source Modules (src/)  │ ───► │   MySQL Database     │
 ├────────────────┤      ├─────────────────────────┤      ├──────────────────────┤
@@ -42,8 +42,6 @@ This project simulates a cloud-ready data acquisition pipeline that continuously
 ---
 
 ## 🛠️ Tech Stack & Dependencies
-
-```text
 
 Language: Python 3.x
 
