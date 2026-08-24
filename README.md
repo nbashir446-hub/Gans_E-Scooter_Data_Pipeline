@@ -52,6 +52,7 @@ This project simulates a cloud-ready data acquisition pipeline that continuously
 
 ## 📁 Repository Structure
 
+```text
 ├── src/
 │   ├── collectors/
 │   │   ├── wiki.py                  # Wikipedia scraping logic
