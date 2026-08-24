@@ -28,16 +28,16 @@ This project simulates a cloud-ready data acquisition pipeline that continuously
 ---
 
 ## 🏗️ Technical Architecture & Workflow
-
-``` text
-┌────────────────┐      ┌─────────────────────────┐      ┌──────────────────────┐
-│  Data Sources  │ ───► │  Source Modules (src/)  │ ───► │   MySQL Database     │
-├────────────────┤      ├─────────────────────────┤      ├──────────────────────┤
-│ Wikipedia      │      │ collectors/wiki.py      │      │ cities               │
-│ OpenWeather    │      │ collectors/weather.py   │      │ populations          │
-│ AeroDataBox    │      │ collectors/aviation.py  │      │ forecasts            │
-└────────────────┘      └─────────────────────────┘      │ airports & flights   │
-                                                         └──────────────────────┘
+```text
++-----------------+     +-----------------------+     +-----------------+
+|  Data Sources   | --> | Source Modules (src/) | --> | MySQL Database  |
++-----------------+     +-----------------------+     +-----------------+
+| Wikipedia       |     | collectors/wiki.py    |     | cities          |
+| OpenWeather     |     | collectors/weather.py |     | populations     |
+| AeroDataBox     |     | collectors/aviation.py|     | forecasts       |
++-----------------+     +-----------------------+     | airports & flights
+                                                      +-----------------+
+```
 
 ---
 
@@ -51,7 +51,7 @@ This project simulates a cloud-ready data acquisition pipeline that continuously
 * **External APIs:** OpenWeatherMap API, AeroDataBox API (via RapidAPI)
 
 ## 📁 Repository Structure
-```text
+
 ├── src/
 │   ├── collectors/
 │   │   ├── wiki.py                  # Wikipedia scraping logic
