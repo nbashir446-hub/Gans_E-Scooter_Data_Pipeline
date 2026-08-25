@@ -1,11 +1,11 @@
 -- Drop the database if it already exists
-DROP DATABASE IF EXISTS 5_days_forecast ;
+DROP DATABASE IF EXISTS gans ;
 
 -- Create the database
-CREATE DATABASE 5_days_forecast;
+CREATE DATABASE gans;
 
 -- Use the database
-USE 5_days_forecast;
+USE gans;
 
 -- Create the 'cities' table
 
