@@ -18,6 +18,16 @@ CREATE TABLE cities (
     PRIMARY KEY (city_id) -- Primary key to uniquely identify each author
 );
 
+-- Create the 'populations' table
+
+CREATE TABLE populations(
+    city_id INT,
+    population INT,
+    date_gathered DATE,
+    FOREIGN KEY (city_id) REFERENCES cities(city_id),
+    PRIMARY KEY (city_id, date_gathered)
+);
+
 -- Create the 'weather_forecast' table
 CREATE TABLE weather_forecast (
     forecast_id INT PRIMARY KEY AUTO_INCREMENT,
