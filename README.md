@@ -79,13 +79,13 @@ RAPIDAPI_KEY=your_key
 ---
 ## 💻 Execution
 
-# Add new cities (Interactive)
+### Add new cities (Interactive)
 python runnable_command/add_run_cities.py
 
-# Refresh populations & airports (Occasional)
+### Refresh populations & airports (Occasional)
 python runnable_command/run_occasional.py
 
-# Fetch weather & flights (Daily)
+### Fetch weather & flights (Daily)
 python runnable_command/run_daily.py
 
 ## 📁 Repository Structure
