@@ -51,6 +51,7 @@ This project simulates a cloud-ready data acquisition pipeline that continuously
 * **External APIs:** OpenWeatherMap API, AeroDataBox API (via RapidAPI)
 
   ---
+  
 ## 🛢️ Database Setup
 
 Initialize the schema in MySQL:
@@ -59,6 +60,7 @@ Initialize the schema in MySQL:
 mysql -u root -p < Gans_cities_schema.SQL
 ```
 ---
+
 ## 🚀 Quickstart
 ### 1. Installation
 
@@ -67,9 +69,7 @@ cd gans-scooter-pipeline
 python -m venv venv && source venv/bin/activate  # Windows: venv\Scripts\activate
 pip install -r requirements.txt
 
----
 ### 2. Configuration
-
 #### Bash
 cp .env.example .env
 
@@ -80,8 +80,8 @@ OPENWEATHER_KEY=your_key
 
 RAPIDAPI_KEY=your_key
 
-
 ---
+
 ## 💻 Execution
 
 ### Add new cities (Interactive)
@@ -92,6 +92,8 @@ python runnable_command/run_occasional.py
 
 ### Fetch weather & flights (Daily)
 python runnable_command/run_daily.py
+
+---
 
 ## 📁 Repository Structure
 
