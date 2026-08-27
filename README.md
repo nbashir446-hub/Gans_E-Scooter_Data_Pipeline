@@ -70,11 +70,16 @@ pip install -r requirements.txt
 ---
 ### 2. Configuration
 
+#### Bash
 cp .env.example .env
 
+#### Code snippet
 CON_STRING=mysql+pymysql://USER:PASSWORD@127.0.0.1:3306/gans_db
+
 OPENWEATHER_KEY=your_key
+
 RAPIDAPI_KEY=your_key
+
 
 ---
 ## 💻 Execution
