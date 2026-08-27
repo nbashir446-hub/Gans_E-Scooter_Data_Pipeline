@@ -50,13 +50,52 @@ This project simulates a cloud-ready data acquisition pipeline that continuously
 * **Database ORM:** SQLAlchemy, PyMySQL
 * **External APIs:** OpenWeatherMap API, AeroDataBox API (via RapidAPI)
 
+  ---
+## 🛢️ Database Setup
+
+Initialize the schema in MySQL:
+
+```bash
+mysql -u root -p < Gans_cities_schema.SQL
+```
+---
+## 🚀 Quickstart
+### 1. Installation
+
+git clone [https://github.com/YOUR_USERNAME/gans-scooter-pipeline.git](https://github.com/YOUR_USERNAME/gans-scooter-pipeline.git)
+cd gans-scooter-pipeline
+python -m venv venv && source venv/bin/activate  # Windows: venv\Scripts\activate
+pip install -r requirements.txt
+
+---
+### 2. Configuration
+
+cp .env.example .env
+
+CON_STRING=mysql+pymysql://USER:PASSWORD@127.0.0.1:3306/gans_db
+OPENWEATHER_KEY=your_key
+RAPIDAPI_KEY=your_key
+
+---
+## 💻 Execution
+
+# Add new cities (Interactive)
+python runnable_command/add_run_cities.py
+
+# Refresh populations & airports (Occasional)
+python runnable_command/run_occasional.py
+
+# Fetch weather & flights (Daily)
+python runnable_command/run_daily.py
+
 ## 📁 Repository Structure
 
 ```text
 ├── src/
 │   ├── collectors/
-│   │   ├── wiki.py                  # Wikipedia scraping logic
-│   │   └── weather.py               # OpenWeather API logic
+│   │   ├── wiki.py                 # Wikipedia scraping logic
+│   │   └── aviation.py             # Aerodatabox API logic
+│   │   └── weather.py              # OpenWeather API logic
 │   └── utils/
 │       └── helpers.py               # Utility and helper functions
 ├── config/
