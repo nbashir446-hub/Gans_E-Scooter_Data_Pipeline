@@ -2,7 +2,7 @@ import requests
 import pandas as pd
 from datetime import date
 from bs4 import BeautifulSoup
-from config.settings import WIKI_HEADERS
+from config.settings import RAPIDAPI_HEADERS
 
 def get_forecasts(cities_df: pd.DataFrame) -> pd.DataFrame:
     forecasts = []
