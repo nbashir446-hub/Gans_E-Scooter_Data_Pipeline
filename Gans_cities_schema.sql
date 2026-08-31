@@ -14,7 +14,7 @@ CREATE TABLE cities (
     name VARCHAR(100) NOT NULL, -- Name of the author
     country VARCHAR (100) NOT NULL,
     latitude DECIMAL(9, 6),
-    longitude DECIMAL(9, 6)
+    longitude DECIMAL(9, 6),
     PRIMARY KEY (city_id) -- Primary key to uniquely identify each author
 );
 
@@ -33,7 +33,7 @@ CREATE TABLE forecasts(
     forecast_id INT PRIMARY KEY AUTO_INCREMENT,
     city_id INT NOT NULL,
     forecast_time DATETIME NOT NULL,
-    tempe DECIMAL(5, 2),
+    temp DECIMAL(5, 2),
     feels_like DECIMAL (5, 2),
     humidity INT,
     outlook VARCHAR(100),
