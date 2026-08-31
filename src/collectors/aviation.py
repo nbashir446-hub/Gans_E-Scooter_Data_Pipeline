@@ -25,7 +25,10 @@ def get_airports(cities_df: pd.DataFrame) -> pd.DataFrame:
             print(f"WARNING: Failed to retrieve airports for {row['name']}")
 
     airports_df = pd.concat(all_airports, ignore_index=True)
-    return airports_df[["icao", "name", "city_id"]]
+    airports_df = airports_df[["icao", "name", "city_id"]] 
+
+    return airports_df
+    
 
 def get_flights(airports_df: pd.DataFrame) -> pd.DataFrame:
     arrivals = []
