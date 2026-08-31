@@ -25,12 +25,12 @@ def get_cities_info(cities: list) -> pd.DataFrame:
                 longitudes.append(None)
         else:
             print(f"WARNING: Could not retrieve HTML for {city}")
-    return pd.DataFrame({
-        "name": cities,
-        "country": countries,
-        "latitude": latitudes,
-        "longitude": longitudes
-    })
+            
+    cities_df = pd.DataFrame({"name": cities, "country": countries, "latitude": latitudes, "longitude": longitudes})
+    
+    return cities_df
+    
+    
 def get_populations(cities_df: pd.DataFrame) -> pd.DataFrame:
     populations, city_ids = [], []
     for i, row in cities_df.iterrows():
@@ -45,8 +45,6 @@ def get_populations(cities_df: pd.DataFrame) -> pd.DataFrame:
                     population = int(row.find_next("td").get_text().replace(",", ""))
                     populations.append(population)
                     city_ids.append(city_id)
-    return pd.DataFrame({
-        "city_id": city_ids,
-        "population": populations,
-        "date_gathered": pd.Timestamp.now().date()
-    }) import requests
+     pops_df = pd.DataFrame({"city_id": city_ids, "population": populations, "date_gathered": pd.Timestamp.now().date()})
+    
+    return pops_df
