@@ -11,8 +11,8 @@ USE gans;
 
 CREATE TABLE cities (
     city_id INT AUTO_INCREMENT, -- Automatically generated ID for each author
-    city_name VARCHAR(100) NOT NULL, -- Name of the author
-    country_name VARCHAR (100) NOT NULL,
+    name VARCHAR(100) NOT NULL, -- Name of the author
+    country VARCHAR (100) NOT NULL,
     latitude DECIMAL(9, 6),
     longitude DECIMAL(9, 6)
     PRIMARY KEY (city_id) -- Primary key to uniquely identify each author
@@ -28,12 +28,12 @@ CREATE TABLE populations(
     PRIMARY KEY (city_id, date_gathered)
 );
 
--- Create the 'weather_forecast' table
-CREATE TABLE weather_forecast (
+-- Create the 'forecasts' table
+CREATE TABLE forecasts(
     forecast_id INT PRIMARY KEY AUTO_INCREMENT,
     city_id INT NOT NULL,
     forecast_time DATETIME NOT NULL,
-    temperature DECIMAL(5, 2),
+    tempe DECIMAL(5, 2),
     feels_like DECIMAL (5, 2),
     humidity INT,
     outlook VARCHAR(100),
@@ -42,15 +42,16 @@ CREATE TABLE weather_forecast (
     FOREIGN KEY (city_id) REFERENCES cities(city_id)
 );
 
-
+-- Create the 'airports' table
 CREATE TABLE airports(
     icao CHAR(4) PRIMARY KEY,
-    `name` VARCHAR(80),
-    `active` BOOL DEFAULT 1,
+    name VARCHAR(80),
+    active TINYINT DEFAULT 1,
     city_id INT,
     FOREIGN KEY (city_id) REFERENCES cities(city_id)
 );
 
+-- Create the 'flights' table
 CREATE TABLE flights(
     flight_id INT AUTO_INCREMENT PRIMARY KEY,
     arrive_icao CHAR(4),
